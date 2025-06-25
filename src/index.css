@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+	--breakpoint-400: 400px;
+	--breakpoint-500: 500px;
+	--breakpoint-640: 640px;
+	--breakpoint-768: 768px;
+	--breakpoint-900: 900px;
+	--breakpoint-950: 950px;
+	--breakpoint-1024: 1024px;
+	--breakpoint-1200: 1200px;
+	--color-white: rgb(240, 240, 240);
+	--color-black: rgb(2, 2, 2);
+}
+
+@layer base {
+	:root {
+		font-size: 16px;
+	}
+}
