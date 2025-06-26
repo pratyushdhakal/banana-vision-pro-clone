@@ -4,7 +4,7 @@ export const wrapperVariants = cva("", {
 	variants: {
 		span: {
 			full: "",
-			constrained: "px-3 500:px-4.5 640:px-5.5 900:px-7 max-w-[1150px] mx-auto"
+			constrained: "px-4 max-w-[1150px] mx-auto"
 		}
 	},
 	defaultVariants: {
