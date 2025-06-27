@@ -1,10 +1,10 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import type { NavItemProps } from "../navbar.types";
 import { useNav } from "../useNav";
 import { motion } from "motion/react";
 
 export default function NavItem({ navItem }: NavItemProps) {
-	const { setSelectedNavLinksDivision, selectedNavLinksDivision } = useNav();
+	const { setSelectedNavLinksDivision } = useNav();
 	const debouncedHoverLinkStatusId = useRef<number | null>(null);
 	const handleHoverStart = () => {
 		debouncedHoverLinkStatusId.current = setTimeout(() => {

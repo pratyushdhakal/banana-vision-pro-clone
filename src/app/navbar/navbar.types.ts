@@ -1,6 +1,5 @@
 import type { Dispatch, SetStateAction } from "react";
 import type {
-	LinkGroup,
 	NavItemsType,
 	NavItemType,
 	NavLinksGroupType
