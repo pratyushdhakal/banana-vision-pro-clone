@@ -6,10 +6,14 @@ import SearchAndCart from "./SearchAndCart";
 import NavModal from "./NavModal";
 import { useNav } from "./useNav";
 import { AnimatePresence } from "motion/react";
+import useScrollLock from "../../shared/hooks/useScrollLock";
 
 export default function Navbar() {
 	const { selectedNavLinksDivision } = useNav();
-
+	const { lock, unlock } = useScrollLock({
+		initialIsLocked: false,
+		manual: true
+	});
 	return (
 		<>
 			<header className=' h-[var(--nav-height)] flex items-center justify-center'>
@@ -25,9 +29,12 @@ export default function Navbar() {
 				</Wrapper>
 			</header>
 
-			<AnimatePresence>
+			<AnimatePresence onExitComplete={unlock}>
 				{selectedNavLinksDivision && (
-					<NavModal selectedNavLinksDivision={selectedNavLinksDivision} />
+					<NavModal
+						selectedNavLinksDivision={selectedNavLinksDivision}
+						lock={lock}
+					/>
 				)}
 			</AnimatePresence>
 		</>
