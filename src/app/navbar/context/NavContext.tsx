@@ -1,6 +1,6 @@
 import { createContext, useState, type ReactNode } from "react";
-import type { NavLinksGroupType } from "./navbar.constants";
-import type { NavContextType } from "./navbar.types";
+import type { NavContextType } from "../navbar.types";
+import type { NavLinksGroupType } from "../navbar.constants";
 
 export const NavContext = createContext<NavContextType | undefined>(undefined);
 

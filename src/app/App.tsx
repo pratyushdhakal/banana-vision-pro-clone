@@ -1,7 +1,7 @@
-import Navbar from "./navbar/Navbar";
-import NavProvider from "./navbar/NavContext";
-import SecondaryNavbar from "./secondary-navbar/SecondaryNavbar";
 import Hero from "./sections/Hero";
+import Navbar from "./navbar/Navbar";
+import SecondaryNavbar from "./secondary-navbar/SecondaryNavbar";
+import NavProvider from "./navbar/context/NavContext";
 import ParallaxContainer from "./sections/parallaxVideo/ParallaxContainer";
 import { parallaxItems } from "./sections/parallaxVideo/parallaxVideo.constants";
 

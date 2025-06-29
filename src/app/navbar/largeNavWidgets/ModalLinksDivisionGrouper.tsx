@@ -11,7 +11,7 @@ const fadeVariants = {
 const linkVariants = cva("", {
 	variants: {
 		linkVariant: {
-			descriptive: "font-bold text-3xl py-1",
+			descriptive: "font-bold text-[1.65rem] py-1",
 			normal: "font-medium py-0.5"
 		}
 	},

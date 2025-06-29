@@ -1,10 +1,9 @@
 import { LuBanana } from "react-icons/lu";
 import { navItems } from "./navbar.constants";
-import NavItems from "./largeNavLinkGroups/NavItems";
 import Wrapper from "../../shared/components/ui/wrapper/Wrapper";
 import SearchAndCart from "./SearchAndCart";
-import NavModal from "./NavModal";
-import { useNav } from "./useNav";
+import NavItems from "./largeNavWidgets/NavItems";
+import { useNav } from "./context/useNav";
 import { AnimatePresence } from "motion/react";
 import useScrollLock from "../../shared/hooks/useScrollLock";
 
@@ -18,7 +17,7 @@ export default function Navbar() {
 		<>
 			<header className=' h-[var(--nav-height)] flex items-center justify-center'>
 				<Wrapper className=' w-full'>
-					<nav className='flex  justify-between  items-center'>
+					<nav className='flex  900:justify-between  items-center'>
 						<div>
 							<LuBanana className='text-xl' />
 						</div>
@@ -31,7 +30,7 @@ export default function Navbar() {
 
 			<AnimatePresence onExitComplete={unlock}>
 				{selectedNavLinksDivision && (
-					<NavModal
+					<NavItems.Modal
 						selectedNavLinksDivision={selectedNavLinksDivision}
 						lock={lock}
 					/>
