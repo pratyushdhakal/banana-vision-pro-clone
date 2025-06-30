@@ -18,4 +18,13 @@ export type NavContextType = {
 	setSelectedNavLinksDivision: Dispatch<
 		SetStateAction<NavLinksGroupType | null>
 	>;
+	isMenuOpen: boolean;
+	openMenu: () => void;
+	closeMenu: () => void;
+	isScreenLarge: boolean;
 };
+
+export interface NonStaticElementProps {
+	selectedNavLinksDivision: NavLinksGroupType;
+	lock: () => void;
+}
